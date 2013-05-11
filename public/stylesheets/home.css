@@ -1,0 +1,12 @@
+
+#postTextField
+{
+	resize: none;
+	height: 50px;
+	width: 490px;
+}
+
+#submitButton:hover
+{
+	color: green;
+}

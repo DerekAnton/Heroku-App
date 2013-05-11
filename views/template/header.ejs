@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<%
+		this.title = undefined;
+		this.javascript = undefined;
+		this.stylesheet = undefined;
+	%>
+	<title><%= title || "Derek Anton" %></title>
+	<link rel="stylesheet" href="/lib/normalize.css" />
+	<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap-responsive.min.css" />
+	<link rel="stylesheet" href="/stylesheets/style.css" />
+	<% if(stylesheet){ %>
+	<link rel="stylesheet" href="/stylesheets/<%= stylesheet %>" />
+	<% } %>
+	<script type="text/javascript" src="/lib/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="/lib/modernizr-2.6.2.min.js"></script>
+	<script type="text/javascript" src="/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="/lib/handlebars-1.0.rc.1.min.js"></script>
+	<script type="text/javascript" src="/javascripts/jQueryInstantSearch.js"></script>
+	<script type="text/javascript" src="/javascripts/main.js"></script>
+	<% if(javascript){ %>
+	<script type="text/javascript" src="/javascripts/<%= javascript %>"></script>
+	<% } %>
+</head>
+<body>
+
+<div id="sticky-bar">
+	<div id="home-link" class="wide-overflow">&nbsp;Welcome</div>
+	<!-- <div id="home-link-a" class="wide-overflow">Just a test</div> -->
+	<div id="bar-inner">
+		<div id="search-results"></div>
+		<!-- Notifications and Settings buttons -->
+		<div id="gear-menu" class="btn-group pull-right">
+			<a id="settings-button" class="btn btn-mini dropdown-toggle" data-toggle="dropdown"><i class="icon-cog"></i></a>
+			<ul class="dropdown-menu arrow-right">
+				<li><a tabindex="-1" href="/settings">Settings</a></li>
+				<li><a tabindex="-1" href="/help">Get Help</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div id="container">
+<div id="content">
