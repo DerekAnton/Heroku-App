@@ -1,5 +1,4 @@
 
-
 exports.home = function(req, res)
 {
 	console.log('serving home');
